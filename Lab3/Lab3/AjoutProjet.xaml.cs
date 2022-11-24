@@ -30,6 +30,16 @@ namespace Lab3
 
         private void Ajouter_Click(object sender, RoutedEventArgs e)
         {
+            Projet q = new Projet()
+            {
+                Numero = numero.Text,
+                Debut = Convert.ToDateTime(arrivalCalendarDatePicker.Date.Value.ToString("dddd dd MMMM yyyy")),
+                Budget = Convert.ToInt32(budget.Text),
+                Description = description.Text,
+                Employe = employe.Text
+            };
+
+            GestionBD.getInstance().ajouter_projet(q);
 
         }
     }

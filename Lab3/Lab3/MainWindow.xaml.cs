@@ -31,6 +31,7 @@ namespace Lab3
 
         private void NavigationView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
+
             var item = (NavigationViewItem)args.SelectedItem;
             Header.Text = item.Tag.ToString();
 

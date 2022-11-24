@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,12 +10,12 @@ namespace Lab3
     internal class Projet
     {
         string numero;
-        string debut;
+        DateTime debut;
         int budget;
         string description;
         string employe;
 
-        public Projet(string numero, string debut, int budget, string description, string employe)
+        public Projet(string numero, DateTime debut, int budget, string description, string employe)
         {
             this.numero = numero;
             this.debut = debut;
@@ -24,7 +25,7 @@ namespace Lab3
         }
 
         public string Numero { get => numero; set => numero = value; }
-        public string Debut { get => debut; set => debut = value; }
+        public DateTime Debut { get => debut; set => debut = value; }
         public int Budget { get => budget; set => budget = value; }
         public string Description { get => description; set => description = value; }
         public string Employe { get => employe; set => employe = value; }
