@@ -8,7 +8,16 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <StackPanel Padding="50" HorizontalAlignment="Left">
 
-    </Grid>
+        <TextBox x:Name="numero" Header="Numéro du projet" Margin="5" MinWidth="200"/>
+        <TextBox x:Name="debut" Header="Date du début" Margin="5" MinWidth="200" />
+        <CalendarDatePicker x:Name="arrivalCalendarDatePicker" Header="Calendar" Margin="5"/>
+        <TextBox x:Name="budget" Header="Budget du projet" Margin="5" MinWidth="200"/>
+        <TextBox x:Name="description" Header="Description du projet" Margin="5" MinWidth="200"/>
+        <TextBox x:Name="employe" Header="Matricule de l'employé" Margin="5" MinWidth="200"/>
+
+
+        <Button x:Name="Ajouter" Background="BlanchedAlmond" Click="Ajouter_Click" >Ajouter</Button>
+    </StackPanel>
 </Page>

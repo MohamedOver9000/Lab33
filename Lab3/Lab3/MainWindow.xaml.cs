@@ -28,9 +28,29 @@ namespace Lab3
             this.InitializeComponent();
         }
 
-        private void myButton_Click(object sender, RoutedEventArgs e)
+
+        private void NavigationView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
-            myButton.Content = "Clicked";
+            var item = (NavigationViewItem)args.SelectedItem;
+            Header.Text = item.Tag.ToString();
+
+            switch (item.Content)
+            {
+                case "Ajouter employe":
+                    mainFrame.Navigate(typeof(AjoutEmploye));
+                    break;
+                case "Ajouter projet":
+                    mainFrame.Navigate(typeof(AjoutProjet));
+                    break;
+                case "Rechercher":
+                    mainFrame.Navigate(typeof(RechercherEmploye));
+                    break;
+                case "Afficher/Rechercher":
+                    mainFrame.Navigate(typeof(RechercherProjet));
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

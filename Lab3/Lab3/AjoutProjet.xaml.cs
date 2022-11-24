@@ -27,5 +27,10 @@ namespace Lab3
         {
             this.InitializeComponent();
         }
+
+        private void Ajouter_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
