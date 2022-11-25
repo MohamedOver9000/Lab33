@@ -30,7 +30,7 @@ namespace Lab3
 
         private void Ajouter_Click(object sender, RoutedEventArgs e)
         {
-            Projet q = new Projet()
+            Projet q = new Projet
             {
                 Numero = numero.Text,
                 Debut = Convert.ToDateTime(arrivalCalendarDatePicker.Date.Value.ToString("dddd dd MMMM yyyy")),
