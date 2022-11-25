@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI;
 
 namespace Lab3
 {
@@ -65,29 +66,6 @@ namespace Lab3
             }
         }
 
-        public string rechercher_employeN(string nom)
-        {
-            try
-            {
-                MySqlCommand commande = new MySqlCommand("rechercheN_emplyoye");
-                commande.Connection = con;
-                commande.CommandType = System.Data.CommandType.StoredProcedure;
-                commande.Parameters.AddWithValue("@nom", nom);
-                con.Open();
-                commande.Prepare();
-                commande.ExecuteNonQuery();
-
-                con.Close();
-
-            }
-            catch
-            {
-                if (con.State == System.Data.ConnectionState.Open)
-                {
-                    con.Close();
-                }
-            }
-            return @a;
-        }
+       
     }
 }
