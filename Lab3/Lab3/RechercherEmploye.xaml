@@ -12,10 +12,12 @@
         <TextBox Header="Recherche à partir du nom" Margin="20" x:Name="RechercheN"  />
         <TextBlock x:Name="tblErreurRN"  Text="Entrez un prenom" Foreground="Red"  Visibility="Collapsed"/>
         <Button x:Name="iRechercherN" Content="Rechercher" Click="iRechercherN_Click" />
-        <ListView x:Name="Affiche"/> 
+         
         
         <TextBox Header="Recherche à partir du prenom" Margin="20" x:Name="RechercheP"/>
         <TextBlock x:Name="tblErreurRP"  Text="Entrez un prenom" Foreground="Red"  Visibility="Collapsed"/>
         <Button x:Name="iRechercherP" Content="Rechercher" Click="iRechercherP_Click" />
+        <ListView x:Name="Affiche"/>
+
     </StackPanel>
 </Page>
